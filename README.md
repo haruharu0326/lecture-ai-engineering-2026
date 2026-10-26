@@ -28,6 +28,7 @@ AIエンジニアリング実践講座（AIE2026）の演習と宿題で使う�
 ```bash
 uv run pytest -q
 uv run python -m app.ask "LoRAとは何ですか？"
+uv run python -m app.ask --chat
 ```
 
 詳しい手順は [lectures/01/problem.md](lectures/01/problem.md) を見てください。
@@ -39,7 +40,8 @@ uv run python -m app.ask "LoRAとは何ですか？"
 .github/workflows/test.yml  PR ごとにテストを実行（fork では Actions タブで有効化が必要）
 app/
   config.py      モデル名とAPIキーの読み込み
-  ask.py         第1回：LLMに質問する
+  ask.py         第1回：LLMに質問する（--chat で会話履歴を保持）
+  benchmark.py   第1回：複数モデル・質問の応答時間とトークン数を CSV 比較
   tools.py       第3回：エージェントのツール（用語集の検索など）
   agent.py       第3回：Pydantic AI の学習支援エージェント（第5回：--mcp で MCP 経由）
   mcp_server.py  第5回：用語集を公開する MCP サーバー
