@@ -1,0 +1,10 @@
+model,question,temperature,run,elapsed_seconds,input_tokens,output_tokens,status,error
+gemini-3.8-flash,LoRAとは何ですか？,0.0,1,16.472,7,679,ok,
+gemini-3.8-flash,LoRAとは何ですか？,0.0,2,19.833,7,801,ok,
+gemini-3.8-flash,LoRAとは何ですか？,0.0,3,22.225,7,829,ok,
+gemini-3.8-flash,LoRAとは何ですか？,0.7,1,17.295,7,755,ok,
+gemini-3.8-flash,LoRAとは何ですか？,0.7,2,21.025,7,811,ok,
+gemini-3.8-flash,LoRAとは何ですか？,0.7,3,19.733,7,799,ok,
+gemini-3.8-flash,LoRAとは何ですか？,1.2,1,16.393,7,830,ok,
+gemini-3.8-flash,LoRAとは何ですか？,1.2,2,17.191,7,729,ok,
+gemini-3.8-flash,LoRAとは何ですか？,1.2,3,18.547,7,760,ok,
