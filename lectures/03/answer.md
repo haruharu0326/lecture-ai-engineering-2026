@@ -9,7 +9,10 @@
 
 ## 宿題
 
-- 取り組んだレベル：基礎 / 実装 / 発展
+- 取り組んだレベル：実装（保存の前に確認を挟む）
 - やったこと：
-- 結果：
-- 気づき・疑問：
+  - `app/tools.py` に `save_learning_log` を作り、`app/agent.py` で `requires_approval=True` を付けて登録した。
+  - このツールが呼ばれると実行は承認待ちで一度止まり、結果として `DeferredToolRequests` が返る。そのため、エージェントの `output_type` に `DeferredToolRequests` を加えた。
+  - CLI で利用者に保存してよいかを尋ね、その結果を渡してエージェントの続きを実行する。
+- 結果：保存処理の前に承認を要求するようにした。
+

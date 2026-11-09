@@ -99,4 +99,24 @@ def make_quiz(lecture: int) -> str:
     return json.dumps({"question": question, "answer": answer}, ensure_ascii=False)
 
     
+def save_learning_log(user_id: str, lecture: int, question: str, answer: str) -> None:
+        """学習ログを保存する。ユーザーID、回数、質問、答えを記録する。
+        学習ログは、ユーザーの学習履歴を追跡し、復習や進捗管理に役立てるために使用される。
+        """
+        log_entry = {
+            "user_id": user_id,
+            "lecture": lecture,
+            "question": question,
+            "answer": answer
+        }
+        log_path = DATA_DIR / "learning_logs.json"
+        if log_path.exists():
+            with open(log_path, "r", encoding="utf-8") as f:
+                logs = json.load(f)
+        else:
+            logs = []
+        logs.append(log_entry)
+        with open(log_path, "w", encoding="utf-8") as f:
+            json.dump(logs, f, ensure_ascii=False, indent=4)
+            
     
